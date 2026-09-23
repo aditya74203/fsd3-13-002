@@ -1,2 +1,2 @@
 console.log("Hello Node JS");
-comsole.log("Node Js as Backend");
+comsole.log("Node Js as Backend"); 
