@@ -6,8 +6,15 @@ const app = express();
 app.get("/", (req, res) => {
     res.send("<h1>Hello Express</h1>")
 })
-app.get("/about",(res,res)=>{
+app.get("/about",(req,res)=>{
     res.send("<h2>About us page</>");
+});
+const products = [
+    {id:1, name:'marker', qty : 100 , price : 15},
+    {id:2, name:'duster', qty : 50 , price : 10},
+]
+app.get("/products",(req,res) =>{
+    res.status(200).send(products);
 });
 app.use((req,res)=>{
     res.status(404).send("<h1>Page Not Found</h1>");
