@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | BrightPath Classes</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#4f46e5;--secondary:#7c3aed;--dark:#111827;--muted:#6b7280;--light:#f5f7ff;--white:#fff;--border:#e5e7eb}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1150px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:22px;font-weight:800;color:var(--primary)}
+.logo span{color:var(--secondary)}
+.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.nav-links a{font-size:14px;font-weight:600;color:#4b5563;padding:8px 4px}
+.nav-links a:hover,.nav-links a.active{color:var(--primary)}
+.nav-btn{background:var(--primary)!important;color:#fff!important;padding:9px 15px!important;border-radius:9px}
+main{min-height:calc(100vh - 145px)}
+.hero{background:linear-gradient(135deg,#eef2ff,#faf5ff);padding:75px 24px;text-align:center}
+.hero h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-bottom:18px}
+.hero p{max-width:680px;margin:auto;color:var(--muted);font-size:18px}
+.container{max-width:1100px;margin:auto;padding:55px 24px}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:34px;margin-bottom:8px}
+.section-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:0 8px 30px rgba(17,24,39,.05)}
+.card h3{margin:8px 0}
+.card p{color:var(--muted)}
+.icon{font-size:30px;color:var(--primary)}
+.form-wrap{max-width:650px;margin:55px auto;padding:0 24px}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px;box-shadow:0 12px 40px rgba(17,24,39,.07)}
+.form-card h1{font-size:32px;margin-bottom:7px}
+.form-card .sub{color:var(--muted);margin-bottom:24px}
+label{display:block;font-weight:600;font-size:14px;margin:16px 0 7px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #d1d5db;border-radius:10px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(79,70,229,.1)}
+textarea{min-height:130px;resize:vertical}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--primary);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;font-size:15px;margin-top:18px}
+.btn:hover{background:#4338ca}
+.btn.secondary{background:#eef2ff;color:var(--primary)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.price-card{border:1px solid var(--border);border-radius:20px;padding:30px;background:#fff;position:relative}
+.price-card.featured{border:2px solid var(--primary);box-shadow:0 15px 45px rgba(79,70,229,.13)}
+.badge{position:absolute;right:20px;top:20px;background:#eef2ff;color:var(--primary);padding:5px 10px;border-radius:20px;font-size:12px;font-weight:700}
+.price{font-size:38px;font-weight:800;margin:18px 0}
+.price small{font-size:14px;color:var(--muted);font-weight:500}
+.features{list-style:none;margin:20px 0}
+.features li{padding:8px 0;color:#4b5563}
+.features li::before{content:"✓";color:#16a34a;font-weight:800;margin-right:9px}
+footer{background:#111827;color:#cbd5e1;padding:38px 24px}
+.footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:center}
+.footer-brand{color:#fff;font-size:20px;font-weight:800}
+.social{display:flex;gap:12px}
+.social a{width:38px;height:38px;border:1px solid #374151;border-radius:50%;display:grid;place-items:center;color:#fff;transition:.2s}
+.social a:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-2px)}
+.footer-copy{font-size:13px;color:#9ca3af;margin-top:10px}
+.note{background:#f9fafb;border:1px solid var(--border);border-radius:12px;padding:14px;margin-top:20px;color:var(--muted);font-size:14px}
+@media(max-width:800px){.nav-inner{align-items:flex-start;flex-direction:column}.nav-links{gap:9px}.grid,.price-grid{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:flex-start}.hero{padding:55px 20px}}
+</style></head>
+<body>
+<nav>
+ <div class="nav-inner">
+  <a class="logo" href="index.html">Bright<span>Path</span> Classes</a>
+  <div class="nav-links">
+   <a href="registration.html" class="">Registration</a>
+   <a href="login.html" class="">Login</a>
+   <a href="courses.html" class="">Courses</a>
+   <a href="feedback.html" class="active">Feedback</a>
+   <a href="prices.html" class="">Prices</a>
+  </div>
+ </div>
+</nav><main>
+<section class="hero"><h1>Your feedback helps us grow.</h1><p>Tell us about your learning experience, teaching quality and what we can improve.</p></section>
+<div class="form-wrap"><div class="form-card">
+<h1>Share your feedback</h1><p class="sub">It takes less than two minutes.</p>
+<form onsubmit="event.preventDefault();alert('Thank you for your feedback!')">
+<label>Your Name</label><input type="text" placeholder="Enter your name" required>
+<label>Course</label><select required><option value="">Select course</option><option>Foundation Program</option><option>Science & Mathematics</option><option>JEE Preparation</option><option>Commerce</option><option>English & Communication</option><option>Computer Science</option></select>
+<label>Rating</label><select required><option value="">Select rating</option><option>5 - Excellent</option><option>4 - Very Good</option><option>3 - Good</option><option>2 - Needs Improvement</option><option>1 - Poor</option></select>
+<label>Your Feedback</label><textarea placeholder="What did you like? What can we improve?" required></textarea>
+<button class="btn" type="submit">Submit Feedback</button>
+</form>
+</div></div>
+</main>
+<footer>
+ <div class="footer-inner">
+  <div>
+   <div class="footer-brand">BrightPath Classes</div>
+   <div class="footer-copy">Learn with confidence. Grow with purpose. © 2026 BrightPath Classes.</div>
+  </div>
+  <div class="social">
+   <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+   <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+   <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+   <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+ </div>
+</footer></body></html>
