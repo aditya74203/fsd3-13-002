@@ -1,6 +1,17 @@
-import express from 'express'
- 
-const app = express{}
- 
-app.listen(3333,()=>comsole.log('server is runing at 3333')
-)
+import express from "express";
+
+const app = express();
+
+// request goes here
+app.get("/", (req, res) => {
+    res.send("<h1>Hello Express</h1>")
+})
+app.get("/about",(res,res)=>{
+    res.send("<h2>About us page</>");
+});
+app.use((req,res)=>{
+    res.status(404).send("<h1>Page Not Found</h1>");
+});
+
+// always listen at last
+app.listen(3333, () => console.log("prg1 is running at 3333"));
