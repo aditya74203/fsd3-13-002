@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Creta Automotive</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#06070b',
+                        cardBg: '#10121a',
+                        bronzeAccent: '#d4af37',
+                        bronzeHover: '#b3922f',
+                        electricBlue: '#38bdf8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #06070b;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .glow-bronze {
+            box-shadow: 0 0 50px -10px rgba(212, 175, 55, 0.25);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #d4af37 60%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-nav {
+            background: rgba(16, 18, 26, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating-element {
+            animation: floatSlow 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 selection:bg-bronzeAccent selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-stone-900 via-stone-800 to-bronzeAccent flex items-center justify-center border border-bronzeAccent/40 shadow-lg">
+                        <i class="fa-solid fa-car-side text-bronzeAccent text-lg"></i>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-widest text-white">CRETA<span class="text-bronzeAccent">.</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#vision" class="hover:text-bronzeAccent transition-colors">Vision & Mission</a>
+                <a href="#heritage" class="hover:text-bronzeAccent transition-colors">Heritage</a>
+                <a href="#pillars" class="hover:text-bronzeAccent transition-colors">Pillars</a>
+                <a href="#leadership" class="hover:text-bronzeAccent transition-colors">Leadership</a>
+                <a href="#manufacturing" class="hover:text-bronzeAccent transition-colors">Manufacturing</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-black bg-bronzeAccent hover:bg-bronzeHover shadow-lg shadow-bronzeAccent/20 transition-all transform hover:-translate-y-0.5">
+                    Global HQ
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-nav border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#vision" class="block py-2 text-gray-300 hover:text-bronzeAccent font-medium">Vision & Mission</a>
+            <a href="#heritage" class="block py-2 text-gray-300 hover:text-bronzeAccent font-medium">Heritage</a>
+            <a href="#pillars" class="block py-2 text-gray-300 hover:text-bronzeAccent font-medium">Pillars</a>
+            <a href="#leadership" class="block py-2 text-gray-300 hover:text-bronzeAccent font-medium">Leadership</a>
+            <a href="#manufacturing" class="block py-2 text-gray-300 hover:text-bronzeAccent font-medium">Manufacturing</a>
+            <a href="#contact" class="block text-center mt-4 w-full py-3 rounded-xl text-black bg-bronzeAccent font-semibold shadow-lg">Global HQ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden">
+        <!-- Background Lighting -->
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-bronzeAccent/10 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/4 right-10 w-[400px] h-[400px] bg-electricBlue/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-bronzeAccent/10 border border-bronzeAccent/30 text-bronzeAccent text-xs font-semibold mb-6 uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-bronzeAccent animate-ping"></span>
+                <span>The Art of Motion</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6">
+                Shaping Tomorrow’s <br>
+                <span class="gradient-text">Driving Experience</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+                At Creta Automotive, we fuse uncompromising German-inspired engineering, handcrafted luxury, and carbon-neutral electric innovation to redefine what a vehicle can be.
+            </p>
+
+            <!-- Hero Image Showcase Banner -->
+            <div class="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/15 shadow-2xl floating-element">
+                <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent z-10 opacity-80"></div>
+                <!-- High-End Car Image Placeholder -->
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80" alt="Creta Luxury Concept Car" class="w-full h-[320px] sm:h-[480px] object-cover filter brightness-90 hover:scale-105 transition-transform duration-700">
+                <div class="absolute bottom-6 left-6 right-6 z-20 flex flex-col sm:flex-row justify-between items-start sm:items-center text-left bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <div>
+                        <div class="text-xs uppercase tracking-widest text-bronzeAccent font-semibold">Flagship Vision 2026</div>
+                        <div class="text-xl font-bold text-white">Creta Apex GT-e — Pure Electric Performance</div>
+                    </div>
+                    <div class="mt-4 sm:mt-0 flex items-center space-x-6 text-sm">
+                        <div>
+                            <div class="text-gray-400 text-xs">0-60 MPH</div>
+                            <div class="font-extrabold text-white">2.3 Sec</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Range</div>
+                            <div class="font-extrabold text-white">650+ Miles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="py-24 bg-[#090a10] relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Our Core Purpose</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Driven by Passion. Guided by Precision.</h2>
+                    <p class="text-gray-400 leading-relaxed font-light">
+                        Creta Automotive was founded on a singular premise: that cars should not merely transport us from point A to point B, but should ignite the senses, harmonize with the natural environment, and serve as an extension of the human will.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                        <div class="bg-cardBg p-6 rounded-2xl border border-white/10">
+                            <div class="w-12 h-12 rounded-xl bg-bronzeAccent/10 text-bronzeAccent flex items-center justify-center mb-4 text-xl">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Our Vision</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">To pioneer autonomous luxury mobility that is 100% carbon-negative across its entire manufacturing and operational lifecycle.</p>
+                        </div>
+                        <div class="bg-cardBg p-6 rounded-2xl border border-white/10">
+                            <div class="w-12 h-12 rounded-xl bg-electricBlue/10 text-electricBlue flex items-center justify-center mb-4 text-xl">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Our Mission</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">To engineer the world’s most intuitive, safe, and exhilarating driver-centric electric vehicles without compromise.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-bronzeAccent/20 to-electricBlue/20 rounded-3xl blur-2xl"></div>
+                    <div class="relative bg-cardBg border border-white/10 rounded-3xl p-8 sm:p-12 space-y-8 shadow-2xl">
+                        <div class="border-l-4 border-bronzeAccent pl-6">
+                            <p class="text-lg italic text-gray-300 font-normal">"We don't build cars for the masses; we craft bespoke automotive sculptures for those who demand absolute perfection on every winding road."</p>
+                            <div class="mt-4 text-sm font-bold text-white">— Viktor von Creta, Chief Executive Officer</div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 text-center">
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-black text-bronzeAccent">14+</div>
+                                <div class="text-xs text-gray-400 mt-1">Global Awards</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
+                                <div class="text-xs text-gray-400 mt-1">Renewable Energy</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-black text-electricBlue">50k+</div>
+                                <div class="text-xs text-gray-400 mt-1">Vehicles Delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage & Design Philosophy -->
+    <section id="heritage" class="py-24 bg-darkBg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Heritage & Design</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 mb-4">Sculpted by Wind and Time.</h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-16">Our design ethos, "Fluidic Aerodynamics," combines organic natural curves with razor-sharp aerodynamic precision to minimize drag coefficient while maximizing aesthetic dominance.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 shadow-xl hover:border-bronzeAccent/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-white/5 text-bronzeAccent flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Wind-Tunnel Perfection</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Every body panel, air intake, and rear diffuser is tested for over 500 hours in cryogenic wind tunnels to achieve an ultra-low 0.19 Cd drag coefficient.</p>
+                </div>
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 shadow-xl hover:border-bronzeAccent/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-white/5 text-electricBlue flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Handcrafted Interiors</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Sourced from sustainably managed alpine tanneries and cruelty-free vegan alternatives, our cabin materials balance tactile warmth with cutting-edge holographic displays.</p>
+                </div>
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 shadow-xl hover:border-bronzeAccent/50 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-white/5 text-bronzeAccent flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Aura Matrix Lighting</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Dynamic micro-LED optical clusters communicate intention with pedestrians and adapt beam throws in real time using neural AI pathway prediction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Engineering Pillars -->
+    <section id="pillars" class="py-24 bg-[#090a10] relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Four Pillars of Excellence</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 mb-4">Engineering Without Compromise.</h2>
+                <p class="text-gray-400 text-lg">The foundational principles that guide every bolt, circuit board, and line of code we write.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 text-center group hover:border-bronzeAccent transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-bronzeAccent/10 text-bronzeAccent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Performance</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Instant quad-motor torque vectoring delivering blistering acceleration and razor-sharp cornering dynamics.</p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 text-center group hover:border-electricBlue transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-electricBlue/10 text-electricBlue flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Sustainability</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Closed-loop battery recycling, ocean-plastic recycled interior components, and 100% solar-powered factories.</p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 text-center group hover:border-bronzeAccent transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-bronzeAccent/10 text-bronzeAccent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Safety</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">360-degree LiDAR sensor suites, ultra-rigid carbon-titanium passenger cells, and proactive AI crash mitigation.</p>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 text-center group hover:border-electricBlue transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-electricBlue/10 text-electricBlue flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Connectivity</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Over-the-air quantum encrypted updates, V2G bi-directional power sharing, and seamless smart-home integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Journey Timeline -->
+    <section id="heritage" class="py-24 bg-darkBg relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Milestones</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 mb-4">Our Automotive Journey.</h2>
+                <p class="text-gray-400 text-lg">From a boutique design studio to a global leader in electric luxury.</p>
+            </div>
+
+            <!-- Timeline wrapper -->
+            <div class="relative border-l-2 border-white/10 ml-4 sm:ml-32 space-y-12">
+                <!-- Item 1 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bronzeAccent ring-4 ring-darkBg"></div>
+                    <div class="text-xs font-bold text-bronzeAccent uppercase tracking-widest mb-1">2018</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Foundation in Munich</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Creta Automotive is established by a collective of veteran Porsche and Tesla engineers with a vision to build the ultimate driver's electric vehicle.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white/40 ring-4 ring-darkBg group-hover:bg-bronzeAccent transition-colors"></div>
+                    <div class="text-xs font-bold text-bronzeAccent uppercase tracking-widest mb-1">2021</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Unveiling the Creta Alpha Concept</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Debut of our revolutionary solid-state battery architecture and fluidic aerodynamics concept at the Geneva Motor Show, winning Best Design of the Year.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white/40 ring-4 ring-darkBg group-hover:bg-bronzeAccent transition-colors"></div>
+                    <div class="text-xs font-bold text-bronzeAccent uppercase tracking-widest mb-1">2024</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Zero-Carbon Gigafactory Opens</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Our flagship production facility in Stuttgart goes live, operating entirely on localized wind and solar generation with zero net carbon footprint.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="relative pl-8 sm:pl-12 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-electricBlue ring-4 ring-darkBg"></div>
+                    <div class="text-xs font-bold text-electricBlue uppercase tracking-widest mb-1">2026 & Beyond</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Global Expansion & Apex GT-e</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Launching deliveries across North America, Europe, and Asia-Pacific, setting new benchmarks for autonomous capability and track performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section id="leadership" class="py-24 bg-[#090a10] relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Executive Leadership</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2 mb-4">The Minds Behind the Wheel.</h2>
+                <p class="text-gray-400 text-lg">Decades of combined championship motorsport and luxury automotive expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Leader 1 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl overflow-hidden shadow-xl group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Viktor von Creta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 relative -mt-10">
+                        <div class="inline-block px-3 py-1 rounded-full bg-bronzeAccent/20 text-bronzeAccent text-[10px] font-bold uppercase mb-2">CEO & Founder</div>
+                        <h3 class="text-xl font-bold text-white">Viktor von Creta</h3>
+                        <p class="text-gray-400 text-xs mt-1 mb-4">Former Head of Advanced Vehicle Dynamics at Porsche Motorsport.</p>
+                        <div class="flex space-x-3 text-gray-400 text-sm">
+                            <a href="#" class="hover:text-bronzeAccent transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-bronzeAccent transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leader 2 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl overflow-hidden shadow-xl group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Dr. Elena Rostova" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 relative -mt-10">
+                        <div class="inline-block px-3 py-1 rounded-full bg-electricBlue/20 text-electricBlue text-[10px] font-bold uppercase mb-2">Chief Technology Officer</div>
+                        <h3 class="text-xl font-bold text-white">Dr. Elena Rostova</h3>
+                        <p class="text-gray-400 text-xs mt-1 mb-4">Pioneer in solid-state energy storage and quantum neural networks.</p>
+                        <div class="flex space-x-3 text-gray-400 text-sm">
+                            <a href="#" class="hover:text-electricBlue transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-electricBlue transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leader 3 -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl overflow-hidden shadow-xl group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Marcus Sterling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 relative -mt-10">
+                        <div class="inline-block px-3 py-1 rounded-full bg-bronzeAccent/20 text-bronzeAccent text-[10px] font-bold uppercase mb-2">Chief Design Officer</div>
+                        <h3 class="text-xl font-bold text-white">Marcus Sterling</h3>
+                        <p class="text-gray-400 text-xs mt-1 mb-4">Award-winning minimalist modernist with 20+ years shaping hypercar icons.</p>
+                        <div class="flex space-x-3 text-gray-400 text-sm">
+                            <a href="#" class="hover:text-bronzeAccent transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-bronzeAccent transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing Excellence -->
+    <section id="manufacturing" class="py-24 bg-darkBg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-tr from-cardBg to-stone-900 border border-white/10 rounded-3xl p-8 sm:p-16 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-bronzeAccent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Stuttgart Gigafactory</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Where Robotics Meets Artisanal Craft.</h2>
+                        <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                            Our advanced manufacturing facility marries robotic laser precision with master artisan hand-stitching. Every Creta vehicle undergoes 1,200 rigorous quality audits before leaving the assembly floor.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check text-bronzeAccent"></i>
+                                <span class="text-xs sm:text-sm font-medium text-gray-300">Autonomous AGV Logistics</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check text-bronzeAccent"></i>
+                                <span class="text-xs sm:text-sm font-medium text-gray-300">Zero Water Waste System</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check text-bronzeAccent"></i>
+                                <span class="text-xs sm:text-sm font-medium text-gray-300">AI Computer Vision Testing</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-solid fa-check text-bronzeAccent"></i>
+                                <span class="text-xs sm:text-sm font-medium text-gray-300">100% Solar Powered Roof</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-black/50 p-6 rounded-2xl border border-white/10 flex flex-col justify-center items-center text-center space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-bronzeAccent/10 text-bronzeAccent flex items-center justify-center text-3xl">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Schedule a Private Factory Tour</h3>
+                        <p class="text-xs text-gray-400 max-w-sm">Experience the future of automotive production firsthand. Exclusive weekend slots available for reservation holders.</p>
+                        <a href="#contact" class="inline-block px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-black bg-bronzeAccent hover:bg-bronzeHover transition-all">Request VIP Pass</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global HQ & Contact Section -->
+    <section id="contact" class="py-24 bg-[#090a10] relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <span class="text-bronzeAccent font-semibold uppercase tracking-widest text-xs">Global Headquarters</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Get in Touch with Creta.</h2>
+                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                        Whether you are inquiring about bespoke configurations, dealership opportunities, or press releases, our global concierge team is at your disposal 24/7.
+                    </p>
+                    <div class="space-y-4 pt-4 text-sm text-gray-300">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/5 text-bronzeAccent flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block">Creta Global Tower</strong>
+                                <span class="text-gray-400 text-xs">Motorstrasse 42, 70346 Stuttgart, Germany</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/5 text-bronzeAccent flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block">Direct Inquiries</strong>
+                                <span class="text-gray-400 text-xs">concierge@creta-automotive.com</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/5 text-bronzeAccent flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white block">Global Support Line</strong>
+                                <span class="text-gray-400 text-xs">+49 711 9820-0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-cardBg border border-white/10 rounded-3xl p-8 sm:p-10 shadow-2xl">
+                    <form onsubmit="handleContact(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 mb-1.5 uppercase">Full Name</label>
+                            <input type="text" required placeholder="Alexander Vance" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-bronzeAccent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 mb-1.5 uppercase">Email Address</label>
+                            <input type="email" required placeholder="alexander@luxury.com" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-bronzeAccent transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 mb-1.5 uppercase">Subject</label>
+                            <select class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-bronzeAccent transition-colors">
+                                <option>Vehicle Configuration & Test Drive</option>
+                                <option>Factory Tour Reservation</option>
+                                <option>Investor Relations</option>
+                                <option>Press & Media Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-400 mb-1.5 uppercase">Message</label>
+                            <textarea rows="4" required placeholder="How may we assist you?" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-bronzeAccent transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider text-black bg-bronzeAccent hover:bg-bronzeHover shadow-lg shadow-bronzeAccent/20 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="contact-success" class="hidden mt-4 p-4 rounded-xl bg-bronzeAccent/10 border border-bronzeAccent/30 text-bronzeAccent text-xs font-semibold text-center">
+                        <i class="fa-solid fa-circle-check text-base mb-1 block"></i>
+                        Your message has been transmitted successfully. Our concierge will respond shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-16 text-gray-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-stone-900 to-bronzeAccent flex items-center justify-center text-bronzeAccent border border-bronzeAccent/40">
+                            <i class="fa-solid fa-car-side text-sm"></i>
+                        </div>
+                        <span class="text-base font-extrabold tracking-widest text-white">CRETA<span class="text-bronzeAccent">.</span></span>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed">The pinnacle of electric luxury and autonomous automotive performance.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-[11px]">Models</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#" class="hover:text-bronzeAccent transition-colors">Creta Apex GT-e</a></li>
+                        <li><a href="#" class="hover:text-bronzeAccent transition-colors">Creta Horizon SUV</a></li>
+                        <li><a href="#" class="hover:text-bronzeAccent transition-colors">Creta Nova Sedan</a></li>
+                        <li><a href="#" class="hover:text-bronzeAccent transition-colors">Bespoke Tailor-Made</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-[11px]">Company</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#vision" class="hover:text-bronzeAccent transition-colors">About Us</a></li>
+                        <li><a href="#leadership" class="hover:text-bronzeAccent transition-colors">Leadership</a></li>
+                        <li><a href="#manufacturing" class="hover:text-bronzeAccent transition-colors">Manufacturing</a></li>
+                        <li><a href="#" class="hover:text-bronzeAccent transition-colors">Careers (We're Hiring)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-[11px]">Newsletter</h4>
+                    <p class="text-gray-500 mb-3">Subscribe for exclusive release announcements and track event invites.</p>
+                    <div class="flex items-center">
+                        <input type="email" placeholder="Enter your email" class="bg-white/5 border border-white/10 rounded-l-xl px-3 py-2.5 text-white focus:outline-none focus:border-bronzeAccent w-full text-xs">
+                        <button class="bg-bronzeAccent hover:bg-bronzeHover text-black px-4 py-2.5 rounded-r-xl font-bold transition-colors">Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-gray-500 space-y-4 sm:space-y-0">
+                <div>&copy; 2026 Creta Automotive AG. All rights reserved.</div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Legal Terms</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Preferences</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact form submission handler
+        function handleContact(e) {
+            e.preventDefault();
+            const form = e.target;
+            const successBox = document.getElementById('contact-success');
+            
+            form.style.display = 'none';
+            successBox.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
