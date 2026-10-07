@@ -17,3 +17,4 @@ If you are developing a production application, we recommend using TypeScript wi
 install tailwind 
 into html by class name becuase class is a perdefined keyword
 when jsx function return directly html contents,called component.
+must be closed 
